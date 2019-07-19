@@ -1,0 +1,14 @@
+.footer{
+    &__item{
+       color: lighten($black, 60);
+       margin-right: $gap;
+       font-size: 12px;
+
+       &:hover{ color: lighten($black, 30); }
+    }
+    &__country{
+       font-size: 12px;
+       line-height: 24px;
+       span{ color: $blue; }
+    }
+}

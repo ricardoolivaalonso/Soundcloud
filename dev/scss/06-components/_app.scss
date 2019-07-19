@@ -1,0 +1,31 @@
+.app{
+    &__background{
+        width: 800px;
+        padding: ($padding * 2) ($padding * 2) 0;
+        margin-top: $padding - 2px;
+    }
+    &__generic{
+        @include flex(flex, flex-start, flex-start, row, wrap);
+        padding: 0 $padding;
+    }
+        &__title{
+            font-size: 36px;
+            line-height: 40px;
+        }
+        &__line{
+            width: 70px;
+            height: 3px;
+            margin: $padding 0;
+            background-image: linear-gradient(to right, #880186, $orange);
+        }
+        &__description{
+            font-size: 20px;
+            line-height: 30px;
+            color: lighten($black, 5);
+            padding-bottom: $padding;
+        }
+        &__icon{
+            height: 40px;
+            padding-right: $gap;
+        }
+}

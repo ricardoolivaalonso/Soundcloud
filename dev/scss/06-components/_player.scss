@@ -1,0 +1,66 @@
+.player{
+    &__content{
+        width: 1240px;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 620px);
+        @include flex(flex, flex-start, center, row, nowrap);
+    }
+}
+.control{
+    &__item{
+        padding: $gap - 3px;
+    }
+}
+.current{
+    @include flex(flex, flex-start, center, row, nowrap);
+    width: 630px;
+    height: 100%;
+    padding: 0 $padding + $gap;
+
+    &__timeline{
+        height: 1px;
+        width: 515px;
+        background: lighten($black, 60);
+        position: relative;
+        margin: 0 $gap;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: $orange;
+        }
+    }
+    &__passed,
+    &__duration{
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+.settings{
+    height: 100%;
+    width: auto;
+    @include flex(flex, space-between, center, row, nowrap);
+    flex-grow: 1;
+    &__img{
+        height: 30px;
+        width: 30px;
+        margin: 0 $gap;
+    }
+    &__description{
+        @include flex(flex, center, flex-start, column, wrap);
+        font-size: 10px;
+        width: 300px;
+    }
+        &__artist{
+            color: lighten($black, 30);
+            line-height: 16px;
+        }
+    &__like{
+        height: 16px;
+    }
+}

@@ -1,0 +1,22 @@
+.contact{
+    &__generic{
+        width: 50%;
+        padding: $padding;
+    }
+        &__title{
+            color: $white;
+            font-size: 32px;
+        }
+        &__description{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &__button{
+            padding: $gap * 1.5 ;
+            width: 180px;
+            margin-top: $padding;
+            border: 1px solid $white;
+            border-radius: $radius;
+            @include flex(flex, center, center, column, wrap);
+        }
+}

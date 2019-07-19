@@ -1,0 +1,8 @@
+.is-hide{
+    transform: translateY(100%);
+    transition: all .3s;
+}
+.is-show{
+    transform: translateY(0);
+    transition: all .3s;
+}

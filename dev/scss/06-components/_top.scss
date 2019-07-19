@@ -1,0 +1,62 @@
+.top{
+    &__form{
+        padding-top: $padding * 2;
+        @include flex(flex, center, center, row, nowrap);
+    }
+        &__input{
+            width: 600px;
+            height: 45px;
+            background: $gray;
+            color: $black;
+            padding: 0 $padding;
+            border-radius: $radius;
+            font-size: 14px;
+            border: none;
+        }
+        &__span{
+            padding: 0 $gap ;
+            font-size: 14px;
+        }
+        &__button{
+            @include flex(flex, center, center, column, wrap);
+            height: 45px;
+            padding: $gap $gap * 3.25;
+            background: $orange;
+            border-radius: $radius;
+        }
+    &__title{
+        line-height: 100px;
+    }
+}
+.list{
+    @include flex(flex, space-between, center, row, wrap);
+    padding: 0 $padding;
+    &__item{
+        margin-left: $gap / 2;
+        margin-bottom: $gap * 4;
+        position: relative;
+        cursor: pointer;
+        max-width: 180px;
+        max-height: 220px;
+        overflow: hidden;
+        &:hover::before{
+            content: '';
+            position: absolute;
+            left: calc(90px - 30px );
+            top: calc(90px - 30px);
+            width: 60px;
+            height: 60px;
+
+            background-image: url("../img/play.png");
+            background-repeat: repeat;
+            background-size: contain;
+            border-radius: 50%;
+        }
+    }
+    &__img{
+        width: 180px;
+        height: 180px;
+        background: $gray;
+        border: 1px solid lighten($black, 50);
+    }
+}

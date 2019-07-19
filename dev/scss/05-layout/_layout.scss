@@ -1,0 +1,62 @@
+.main{
+	width: 1240px;
+	min-height: 100vh;
+	margin: 0 auto;
+	font-size: 14px;
+}
+.header{
+    height: 455px;
+    width: 100%;
+    position: relative;
+
+    background: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: $white;
+    border-top: 4px solid $orange;
+    font-size: 12px;
+    @include flex(flex, center, center, column, wrap);
+}
+.top{
+    width: 100%;
+    min-height: 825px;
+    @include flex(flex, flex-start, center, column, wrap);
+    background: $white;
+}
+.app{
+    width: 100%;
+    height: 450px;
+    @include flex(flex, center, center, row, nowrap);
+}
+.contact{
+    height: 350px;
+    background: url("../img/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    padding: $padding * 2;
+}
+.login{
+    width: 100%;
+    height: 290px;
+    background: $white;
+    padding: $padding;
+    @include flex(flex, center, center, column, nowrap);
+}
+.footer{
+    width: 100%;
+    height: 150px;
+    background: $white;
+    padding: $padding;
+    border-top: 1px solid $gray;
+}
+.player{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $gray;
+    border-top: 1px solid lighten($black, 60);
+}
